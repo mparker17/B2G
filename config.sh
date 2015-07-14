@@ -186,6 +186,11 @@ case "$1" in
 	repo_sync $1
 	;;
 
+"oneplus-one"|"bacon"|"opo")
+	echo DEVICE=bacon >> .tmp-config &&
+	repo_sync bacon
+	;;
+
 *)
 	echo "Usage: $0 [-cdflnq] (device name)"
 	echo "Flags are passed through to |./repo sync|."
@@ -222,6 +227,9 @@ case "$1" in
 	echo - shinano-l "(Z3 L)"
 	echo - aries "(Z3C KK)"
 	echo - aries-l "(Z3C L)"
+	echo - oneplus-one
+	echo - bacon
+	echo - opo
 	echo - emulator
 	echo - emulator-jb
 	echo - emulator-kk
